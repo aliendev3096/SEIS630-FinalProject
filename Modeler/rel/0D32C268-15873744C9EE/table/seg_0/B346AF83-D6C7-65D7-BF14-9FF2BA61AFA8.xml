@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B346AF83-D6C7-65D7-BF14-9FF2BA61AFA8" name="Book">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>92A797B8-F622-8B72-7239-6D9381D1A06D</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<abbreviation>Book</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Book_ID" id="07142198-0043-58A4-7D82-B2ACB9AEE4C3">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="BookType_ID" id="DCC5B395-FAC1-E9BE-D87F-E8B2F2DA5CBD">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>B1A9ED8A-CA7E-B044-AB94-44A0629E329E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5C81AF6-9FD6-0394-5430-0E4FFD44757B" referredColumn="2F5C81B0-E1C7-7C65-B430-092A5ED7ACAE"/>
+</associations>
+</Column>
+<Column name="Departure_ID" id="1FF675C3-3BD8-E724-7CC2-C9E9275250B9">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>0924A7F9-A813-710D-4C6C-FFC2FE612EA4</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AAB93F05-17A0-492C-4A0B-83D935E8C648" referredColumn="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</associations>
+</Column>
+<Column name="Arrival_ID" id="CA15DD02-D0F6-9C41-3AB1-72DE7427745F">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>839C90A9-F358-4823-EE05-19F8C50395A5</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="285E3846-F774-E6BB-45C1-05561080E826" referredColumn="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</associations>
+</Column>
+<Column name="DepartureDate" id="DC365D53-CFEC-EA76-CF72-048B7987C514">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>84E03522-196A-B501-062F-DEC602D9186C</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ArrivalDate" id="55298419-7808-2613-8522-398E8FB3DB58">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>11246F4E-AB1D-F528-A2F1-C63043AFB09C</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41A6A919-8FC9-73C4-F271-1CF5A5E93051" name="Book_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="07142198-0043-58A4-7D82-B2ACB9AEE4C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54ECE6B4-112D-6F7C-478A-CFD7DE0721AB" name="Book_BookId_UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>C83B9F1A-4E06-DC87-6887-6DD796F0A50D</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07142198-0043-58A4-7D82-B2ACB9AEE4C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18C64453-9F1C-884F-A80A-7046C5B50F6A" name="Book_Location_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:21:04 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1FF675C3-3BD8-E724-7CC2-C9E9275250B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E983AE6-AEAF-1E1D-EFD6-BBAF94C107B1" name="Book_Location_FKv1">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:21:04 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA15DD02-D0F6-9C41-3AB1-72DE7427745F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="913D7F47-8AE8-DF68-1199-9C6AE55B8CEA" name="Book_BookType_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:22:54 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DCC5B395-FAC1-E9BE-D87F-E8B2F2DA5CBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

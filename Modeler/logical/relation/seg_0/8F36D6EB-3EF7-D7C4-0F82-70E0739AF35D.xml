@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="OrdersAudit_Order_FK" directorySegmentName="seg_0" id="8F36D6EB-3EF7-D7C4-0F82-70E0739AF35D">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:36:11 UTC</createdTime>
+<generatorID>33D2996D-15E3-A27E-1045-91A7760AD84A</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6F08C8A5-07FA-7402-9A68-031FB96F8975</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>83C476EE-748F-D676-5C02-7B8CC4F7C8B3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

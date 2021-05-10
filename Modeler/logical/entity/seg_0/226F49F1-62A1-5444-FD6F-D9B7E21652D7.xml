@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="226F49F1-62A1-5444-FD6F-D9B7E21652D7" name="Invoice">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>48658224-0ED0-EA07-86EE-4D96CF42263E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Invoice</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Locked" id="5B05EFBF-E3AA-E5F8-7EA2-E2FA6AB86913">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>F4B389E7-27E2-8FFC-B79B-DDD46D0131AD</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total" id="0B69BD8E-84DF-1940-F9B8-27E543FEE817">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>50BA52E0-98A1-EB28-AA99-2DE526F8502F</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT044</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,2,6</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BillTo" id="C34DCC7C-7F01-FB13-24A5-2F1D886FBF77">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>E49D003F-E2C6-763A-5B50-E0E82E973C36</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Invoice_ID" id="F44C5234-0F71-67B2-32FF-FCFB9A5E1FA9">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:35:55 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="125E8AD8-4CB0-0B64-7D71-CD5B4B0E8E10" name="Invoice PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:36:08 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F44C5234-0F71-67B2-32FF-FCFB9A5E1FA9</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="9D9BDF82-B695-5173-F8F1-24C01E2EF543" name="Invoice InvoiceId UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:36:11 UTC</createdTime>
+<generatorID>0D3D46D4-A41E-5936-FFBF-684C06511814</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+</identifier>
+</identifiers>
+</Entity>

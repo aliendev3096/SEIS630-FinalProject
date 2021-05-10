@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DDDDDEC4-9F91-2B5F-7AE6-70B78AFD2A16" name="Customer">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>E66C8241-9E3F-B1C3-FAE3-FEA372EF0961</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Customer</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Customer_ID" id="A3958A6B-7E8F-9210-2351-8E04F62F1980">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>232048A3-BEB5-FBA0-C893-EBCACB6409AC</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FirstName" id="BE56A177-45DB-3B7C-AD82-BF354304D695">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>F3E4BC45-AFC1-3E5C-468E-28DAD8E16BEB</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Age" id="A740A352-2FD7-0937-0182-71FA7F9D2D8C">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>C31EDDBD-0F0B-10A6-5D3D-92FA6F034281</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LastName" id="435F687D-221D-5AF1-2806-F87CB39733CE">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>4AD41D3D-F9C1-6346-C2D4-98A23194CFA3</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C2E4E292-1C8F-E1F2-C951-347AA1516C30" name="Customer PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:35:40 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A3958A6B-7E8F-9210-2351-8E04F62F1980</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="88736972-126C-AC9C-CC81-0841C777CB3D" name="Customer CustomerId UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:36:11 UTC</createdTime>
+<generatorID>CEDB7203-B640-0339-6297-CDBA18CD8B47</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+</identifier>
+</identifiers>
+</Entity>

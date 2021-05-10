@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC792FE5-84F3-C350-1E7E-64CAE05FC8EC" name="Order">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>8FBDC52F-7A6A-2B12-011F-84DF531A261B</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<abbreviation>Order</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Order_ID" id="0958BAF4-5148-52B3-1C82-DC99CCF9201D">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Customer_ID" id="9E88FE7D-0009-F27D-A1CD-1E6E50270CE4">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>DA6C14C0-DE9C-D918-E006-A92F29935F45</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00B6C4AC-E884-57E0-6960-F11DFD143DF1" referredColumn="E7379D2B-905D-EC05-0A18-9F74D6C8071E"/>
+</associations>
+</Column>
+<Column name="Invoice_ID" id="2FC3C808-C846-CAF2-6655-41867270731D">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>539626C8-2608-2801-7439-473D7AFF22FF</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F1CF39A2-EF89-6005-0825-6686C5F896AE" referredColumn="EAEFC6DE-2D48-D6B1-32D6-E614C1F81941"/>
+</associations>
+</Column>
+<Column name="Departure_ID" id="4F805605-20A1-5F13-4D49-7E7C322BC87A">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>80FA81F9-F179-A0C6-AE84-B5465B0762A2</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C06641C1-D287-689A-A1AD-331093C30DC7" referredColumn="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</associations>
+</Column>
+<Column name="Arrival_ID" id="A22953F9-76C7-714C-B80B-50FE36CABAEC">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>94327D71-0CCE-26D5-2183-599D54E0073D</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="751DCFFD-CE39-E221-DF48-0ADC98C8903C" referredColumn="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</associations>
+</Column>
+<Column name="Status_ID" id="D390BBB1-C9F0-AF4D-5E6F-297B152F7FB5">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>51DA2457-0F89-CD31-9B25-6802584581A7</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="487B5C67-2D57-6214-27EF-348E87A33630" referredColumn="1F0B00C0-BEDF-F1D9-7562-306EE5C23D48"/>
+</associations>
+</Column>
+<Column name="DepartureDate" id="559AF234-D7DB-7E2C-FA1A-F4C493477B5C">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>E5A9D1B0-5393-2B16-B2AC-2E990192053C</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReturnDate" id="AE8E178C-56F1-1025-48F6-3BDD366AFBA9">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>B32A8231-C976-A3E3-747D-52C97AEF079E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0069CAF-D6C2-0BE8-BF30-FDAE3190C20C" name="Order_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="0958BAF4-5148-52B3-1C82-DC99CCF9201D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A63A7C3B-EBA6-BCAA-2A7F-27389249DE50" name="Order_OrderId_UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>09C46BC9-3697-C7CC-7A40-8CA87DC3C74F</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0958BAF4-5148-52B3-1C82-DC99CCF9201D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D04246F-51AD-C8BD-9CEB-A2BCE60B7012" name="Order_Customer_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:10:16 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E88FE7D-0009-F27D-A1CD-1E6E50270CE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B8B7B7E-55A7-C21B-6F20-AA2E2AA32012" name="Order_Invoice_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:11:42 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2FC3C808-C846-CAF2-6655-41867270731D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27F3A277-C10A-4C31-C249-0874C10BFB87" name="Order_Location_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:13:27 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F805605-20A1-5F13-4D49-7E7C322BC87A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CCB0C3D-44FD-26B0-B2EF-FD8D51F40628" name="Order_Location_FKv2">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:13:27 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A22953F9-76C7-714C-B80B-50FE36CABAEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D1AAC73-9D5E-1DF6-DFA6-C0BE4839C404" name="Order_Status_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:13:27 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D390BBB1-C9F0-AF4D-5E6F-297B152F7FB5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

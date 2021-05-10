@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Traveler Order Details</title>
+    <link rel="stylesheet" href="http://localhost:3000/order.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script>
+      var socket = io()
+      socket.on('error', (message) => {
+        var error = document.getElementById("error");
+        error.innerHTML = message
+      })
+
+      socket.on('Retrieved Order Details', (data) => {
+        populateOrderDetails(data.orderDetails)
+        if (data.invoiceDetails) populateInvoiceDetails(data.invoiceDetails)
+        populateBookDetails(data.bookDetails)
+        populateAuditDetails(data.auditDetails)
+      })
+
+      socket.on('Created Invoice', (data) => {
+        populateInvoiceDetails(data.invoice)
+        populateOrderDetails(data.order)
+        populateAuditDetails(data.audit)
+      })
+
+      socket.on('Payment Made', (data) => {
+        populateInvoiceDetails(data.invoice)
+        populateOrderDetails(data.order)
+        populateAuditDetails(data.audit)
+      })
+
+      socket.on('Order Cancelled', (data) => {
+        populateInvoiceDetails(data.invoice)
+        populateOrderDetails(data.order)
+        populateAuditDetails(data.audit)
+      })
+
+      socket.on('Order Deleted', (data) => {
+        window.location.href = '/'
+      })
+
+      socket.emit('Retrieve Order Detail', window.location.href.substring(window.location.href.lastIndexOf('/') + 1, window.location.href.length))
+
+      function createInvoice()
+      {
+        socket.emit('Create Invoice', window.location.href.substring(window.location.href.lastIndexOf('/') + 1, window.location.href.length))
+      }
+
+      function makePayment()
+      {
+        socket.emit('Make Payment', window.location.href.substring(window.location.href.lastIndexOf('/') + 1, window.location.href.length))
+      }
+
+      function cancelOrder()
+      {
+        socket.emit('Cancel Order', window.location.href.substring(window.location.href.lastIndexOf('/') + 1, window.location.href.length))
+      }
+
+      function deleteOrder()
+      {
+        socket.emit('Delete Order', window.location.href.substring(window.location.href.lastIndexOf('/') + 1, window.location.href.length))
+      }
+
+
+      function populateOrderDetails(data)
+      {
+        var orderDetailsTable = document.getElementById("orderDetails");
+        $("#orderDetails").find("tr:gt(0)").remove();
+        const o = data;
+        const newRow = orderDetailsTable.insertRow()
+        // order id
+        const orderId = newRow.insertCell();
+        orderId.innerHTML += o.orderId
+        // customer name
+        const customerName = newRow.insertCell();
+        customerName.innerHTML = o.fullName
+        //invoice
+        const invoice = newRow.insertCell();
+        invoice.innerHTML = o.invoiceId ? true : false
+        //status
+        const status = newRow.insertCell();
+        status.innerHTML = o.status
+        //departure
+        const departure = newRow.insertCell();
+        departure.innerHTML = o.departure
+        //arrival
+        const arrival = newRow.insertCell();
+        arrival.innerHTML = o.arrival
+        //departure date
+        const departureDate = newRow.insertCell();
+        departureDate.innerHTML = o.departureDate
+        //arrival date
+        const arrivalDate = newRow.insertCell();
+        arrivalDate.innerHTML = o.arrivalDate
+      }
+      function populateInvoiceDetails(data)
+      {
+        var invoiceDetailsTable = document.getElementById("invoiceDetails");
+        $("#invoiceDetails").find("tr:gt(0)").remove();
+        const o = data;
+        const newRow = invoiceDetailsTable.insertRow()
+
+        const invoiceId = newRow.insertCell();
+        invoiceId.innerHTML += o.invoiceId
+
+        const billTo = newRow.insertCell();
+        billTo.innerHTML = o.billTo
+
+        const locked = newRow.insertCell();
+        locked.innerHTML = o.locked === 0 ? false : true
+
+        const total = newRow.insertCell();
+        total.innerHTML = o.total
+      }
+      function populateBookDetails(data)
+      {
+        var bookDetailsTable = document.getElementById("bookDetails");
+        $("#bookDetails").find("tr:gt(0)").remove();
+        data.forEach(o => {
+          const newRow = bookDetailsTable.insertRow()
+
+          const bookId = newRow.insertCell();
+          bookId.innerHTML += o.bookId
+
+          const bookType = newRow.insertCell();
+          bookType.innerHTML = o.bookType
+
+          const departure = newRow.insertCell();
+          departure.innerHTML = o.departure
+
+          const arrival = newRow.insertCell();
+          arrival.innerHTML = o.arrival
+
+          const departureDate = newRow.insertCell();
+          departureDate.innerHTML = o.departureDate
+
+          const arrivalDate = newRow.insertCell();
+          arrivalDate.innerHTML = o.arrivalDate
+        })
+      }
+      function populateAuditDetails(data)
+      {
+        var auditDetailsTable = document.getElementById("auditDetails");
+        $("#auditDetails").find("tr:gt(0)").remove();
+        data.forEach(o => {
+          const newRow = auditDetailsTable.insertRow()
+
+          const orderId = newRow.insertCell();
+          orderId.innerHTML += o.orderId
+
+          const invoiceId = newRow.insertCell();
+          invoiceId.innerHTML = o.invoiceId
+
+          const status = newRow.insertCell();
+          status.innerHTML = o.status
+
+          const occurredDate = newRow.insertCell();
+
+          occurredDate.innerHTML = o.occurredDate
+        })
+      }
+    </script>
+    <div id="wrapper">
+      <div id="left">
+        <div id="stack">
+          <strong>Create Invoice associated to current order.</strong>
+          <p>- Create Invoice.</p>
+          <p>- Add invoice to invoice table.</p>
+          <p>- Update order status to RECIEVED</p>
+          <button type="button" class="button" onclick="createInvoice()">Create Invoice</button>
+        </div>
+        <div id="stack">
+          <strong>Make Payment</strong>
+          <p>- Pay invoice total.</p>
+          <p>- Update order status to CONFIRMED</p>
+          <p>- Update Invoice Locked to true</p>
+          <button type="button" class="button" onclick="makePayment()">Make Payment</button>
+        </div>
+        <div id="stack">
+          <strong>Cancel Order</strong>
+          <p>- Cancels current order.</p>
+          <p>- Update order status to CANCELLED</p>
+          <button type="button" class="button" onclick="cancelOrder()">Cancel Order</button>
+        </div>
+        <div id="stack">
+          <strong>Delete Order</strong>
+          <p>- Deletes current order.</p>
+          <p>- Deletes Associated Invoice</p>
+          <button type="button" class="button" onclick="deleteOrder()">Delete Order</button>
+        </div>
+        <p id="error"></p>
+      </div>
+      <div id="right">
+        <div id="stack">
+          <div id="top-table">
+          <h2>Order Details</h2>
+            <table id="orderDetails" style="width:100%">
+              <tr>
+                <th>Order #</th>
+                <th>Customer Name</th>
+                <th>Invoiced?</th>
+                <th>Status</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Departure Date</th>
+                <th>Arrival Date</th>
+              </tr>
+            </table>
+          </div>
+          <div id="wrapper">
+          <div id="left-table">
+            <h2>Invoice Details</h2>
+              <table id="invoiceDetails" style="width:100%">
+                <tr>
+                  <th>Invoice Id</th>
+                  <th>Bill To</th>
+                  <th>Locked?</th>
+                  <th>Total</th>
+                </tr>
+              </table>
+            </div>
+            <div id="right-table">
+              <h2>Book Details</h2>
+                <table id="bookDetails" style="width:100%">
+                  <tr>
+                    <th>Book Id</th>
+                    <th>Transportation</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Departure Date</th>
+                    <th>Arrival Date</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+        </div>
+        <div id="stack">
+          <div id="bottom-table">
+            <h2>Audit Details</h2>
+              <table id="auditDetails" style="width:100%">
+                <tr>
+                  <th>Order #</th>
+                  <th>Invoiced Id</th>
+                  <th>Status</th>
+                  <th>Occurred Date</th>
+                </tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

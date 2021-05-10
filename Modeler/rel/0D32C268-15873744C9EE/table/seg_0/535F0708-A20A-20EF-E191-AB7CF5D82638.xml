@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="535F0708-A20A-20EF-E191-AB7CF5D82638" name="OrdersAudit">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:31:47 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Audit_ID" id="63D2C0B0-4135-932D-3EC6-3F4467AB0E72">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:32:33 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Order_ID" id="9DB1C592-7C42-45D6-0FD2-9285C929D20C">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:32:33 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Invoice_ID" id="195F8105-B51B-4347-08FF-20239D7E4F04">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:32:59 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="7662697C-E12B-B61A-83F9-36C092FE379A">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:33:13 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OccurredDate" id="C1BDB5AC-0CFE-7F6F-012C-6C1ECFF63022">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:33:30 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C1AEDF2B-312C-BBF1-A1CB-6D2E36A4EC97" name="OrdersAudit_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:32:33 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63D2C0B0-4135-932D-3EC6-3F4467AB0E72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A89370D-A4B1-2C34-0691-7676D4B31D2D" name="OrdersAudit_Order_FK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:34:16 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

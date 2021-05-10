@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6F08C8A5-07FA-7402-9A68-031FB96F8975" name="Order">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>DC792FE5-84F3-C350-1E7E-64CAE05FC8EC</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Order</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Customer ID" id="5A96B8F5-F63D-915E-A0A7-A4348729CB8D">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>9E88FE7D-0009-F27D-A1CD-1E6E50270CE4</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Invoice ID" id="34AF8FC3-F9D1-F137-74FD-B1F367321C83">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>2FC3C808-C846-CAF2-6655-41867270731D</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Departure ID" id="C98CEFD3-0522-1B9D-4923-F80B69B820CB">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>4F805605-20A1-5F13-4D49-7E7C322BC87A</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Arrival ID" id="6703901F-310A-AD76-4B65-DC5FA4CB6EDA">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>A22953F9-76C7-714C-B80B-50FE36CABAEC</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status ID" id="46E41438-F485-BEC3-6E62-FDED82203225">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>D390BBB1-C9F0-AF4D-5E6F-297B152F7FB5</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DepartureDate" id="6B7764AC-8262-5B74-74D6-F10CA7D787F6">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>559AF234-D7DB-7E2C-FA1A-F4C493477B5C</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ReturnDate" id="E4B5541B-7401-D32E-737B-7F5011EBD10A">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>AE8E178C-56F1-1025-48F6-3BDD366AFBA9</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Order_ID" id="A184B26D-D0F1-29FC-2BBB-E1A4CE95545F">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:36:16 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FAEBD566-832D-7DA7-4BB1-1EDD61FE8D63" name="Order PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:36:55 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A184B26D-D0F1-29FC-2BBB-E1A4CE95545F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="FD9AC37F-2B3E-88E2-F1B2-7403A8C08798" name="Order OrderId UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-29 00:36:11 UTC</createdTime>
+<generatorID>A63A7C3B-EBA6-BCAA-2A7F-27389249DE50</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+</identifier>
+</identifiers>
+</Entity>

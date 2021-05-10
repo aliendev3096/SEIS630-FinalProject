@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="48658224-0ED0-EA07-86EE-4D96CF42263E" name="Invoice">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>2E18B173-A89F-ED11-D36F-ADC68EFF4EE5</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<abbreviation>Invoice</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Locked" id="F4B389E7-27E2-8FFC-B79B-DDD46D0131AD">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>0CD87FA9-BB98-322D-9647-40911CC5AB88</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total" id="50BA52E0-98A1-EB28-AA99-2DE526F8502F">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>8A382E67-1947-DFC9-1CCC-93E51F2E7106</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT044</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,2,6</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BillTo" id="E49D003F-E2C6-763A-5B50-E0E82E973C36">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>DC08C65D-04A5-ED84-8BBA-B065E94F1147</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Invoice_ID" id="EAEFC6DE-2D48-D6B1-32D6-E614C1F81941">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="391AE038-BF4F-6958-0608-CB187CFD966F" name="Invoice_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="EAEFC6DE-2D48-D6B1-32D6-E614C1F81941"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D3D46D4-A41E-5936-FFBF-684C06511814" name="Invoice_InvoiceId_UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>AA2CCA39-F15E-49B9-6ACF-FC5A918AC343</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EAEFC6DE-2D48-D6B1-32D6-E614C1F81941"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

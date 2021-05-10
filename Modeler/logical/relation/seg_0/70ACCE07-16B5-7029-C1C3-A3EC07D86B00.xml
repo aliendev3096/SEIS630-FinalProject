@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Order_Location_FKv2" directorySegmentName="seg_0" id="70ACCE07-16B5-7029-C1C3-A3EC07D86B00">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>751DCFFD-CE39-E221-DF48-0ADC98C8903C</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>80D7E266-1E23-97D1-625A-F2E35EAD8E4E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6F08C8A5-07FA-7402-9A68-031FB96F8975</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

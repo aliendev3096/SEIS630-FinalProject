@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3C2CA0E-3A5B-8D3B-365D-D2B8D952A27B" name="BookType">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>090DA906-06A4-7D2F-4F97-FFD8DA6A2237</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="356BF1D1-7D95-88BF-8D5C-4D3B5D162758">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>6C4C15F3-FD49-3F2E-7594-657ABB2B2E7D</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BookType_ID" id="2F5C81B0-E1C7-7C65-B430-092A5ED7ACAE">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="590B8711-F24D-DBF2-5723-5B3B03B1E5EC" name="BookType_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="2F5C81B0-E1C7-7C65-B430-092A5ED7ACAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2F2ABE7D-8AAC-8D90-21A4-93A536447478" name="BookType_BookTypeId_UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>5EE90CD5-AF71-3919-E9F1-7AAAE1B33344</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F5C81B0-E1C7-7C65-B430-092A5ED7ACAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9FBBF3FA-9FEB-7D8C-2280-C867E18562BB" name="BookType__IDX">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:51:12 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>7CB97AF6-A35C-458E-E246-0CDF7B992D98</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2F5C81B0-E1C7-7C65-B430-092A5ED7ACAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

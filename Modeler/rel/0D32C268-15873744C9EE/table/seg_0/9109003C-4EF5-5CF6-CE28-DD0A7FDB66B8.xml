@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9109003C-4EF5-5CF6-CE28-DD0A7FDB66B8" name="Location">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>B2EB7625-30D1-7BE9-59D0-4727F1E61A30</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<abbreviation>Location</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AirportCode" id="12E2E310-76B3-F27B-D170-9F692D46F776">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>A2CEC352-EF7F-1F86-6441-7540DDBFD55E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="324DCE14-1435-1622-F71C-F61F073D6B45">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>DAA16B05-E5EE-F420-5A3B-61C74B787B7E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="State" id="0E03790C-C3B1-25B5-3D00-53D4951E27D4">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>8B8D136B-D59B-373F-25E7-6C58295C202E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Country" id="FFA53BC7-C6A2-B7FC-DDDF-E213801787A0">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>93773426-80E4-7EAA-E139-88D2C339EAEB</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Location_ID" id="1632A66B-B960-9C26-DF34-4FA9555B467F">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6D51C13D-9E18-8B5B-357F-43D41C37BB10" name="Location_PK">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<ownerDesignName>Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23DCE5AF-8D1A-0567-8E20-4BFAD87D43C9" name="Location_LocationId_UN">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-07 02:39:35 UTC</createdTime>
+<generatorID>D72CFEC7-86FE-5AF8-CB90-7F6EF3286A9E</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1632A66B-B960-9C26-DF34-4FA9555B467F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

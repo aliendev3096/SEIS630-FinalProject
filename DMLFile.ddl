@@ -1,0 +1,9 @@
+INSERT INTO Status (Name) VALUES ('PENDING_PAYMENT')
+INSERT INTO Status (Name) VALUES ('RECEIVED')
+INSERT INTO Status (Name) VALUES ('CONFIRMED')
+INSERT INTO Status (Name) VALUES ('PENDING')
+
+INSERT INTO BookType (Name) VALUES ('Flight')
+INSERT INTO BookType (Name) VALUES ('Car Rental')
+INSERT INTO BookType (Name) VALUES ('Rail')
+INSERT INTO BookType (Name) VALUES ('Shuttle')

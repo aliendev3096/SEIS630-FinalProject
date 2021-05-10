@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="OrderedBooks_Book_FK" directorySegmentName="seg_0" id="CA9CD014-EA9E-C196-55FF-05EA6A4FBD58">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>B18327D2-7325-EB7F-75D2-FFB100D6D6D1</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B9D38137-8431-EC38-6A7D-C4052112A98C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>58610CA6-E7B0-2C4C-BC5B-0AC3E5388F61</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

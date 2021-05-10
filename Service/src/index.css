@@ -1,0 +1,42 @@
+#wrapper {
+  display: flex;
+}
+
+#left {
+flex: 0 0 35%;
+}
+
+#right, #right-table {
+flex: 1;
+}
+
+#left-table {
+flex: 0 0 50%;
+}
+
+th {
+text-align: left;
+}
+
+table {
+border-color: black;
+border-radius: 2px;
+border-style: double;
+}
+
+#stack {
+width: 100%;
+margin-bottom: 10px;
+}
+
+.button {
+width: 100%;
+transition-duration: 0.4s;
+border-radius: 2px;
+background-color: #008CBA;
+}
+
+.button:hover {
+border-radius: 2px;
+background-color: white;
+}

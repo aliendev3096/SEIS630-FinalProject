@@ -1,0 +1,19 @@
+
+Jeff Vang
+SEIS 630
+Final Project Proposal
+
+For my final project I wanted to get some experience with database design. The domain that I have selected is travel sales.
+Using more advanced topics in SQL, I want to simulate the events that may occur when a customer decides to book their next vacation. 
+I think this will be a great opportunity for me to expand my knowledge of SQL through hands on practice and obtain experience with database design to prepare for real world situations.
+
+///////// Key Objective ///////////////////////
+
+- This project will include a database design using Oracle Data modeler's forward and backward engineering process to generate related domain entities. 
+
+- It will provide examples of how applications (both front and back end) can connect with sql database serversand interfact with different types of schema objects.
+
+- Practice the use of advanced schema objects.
+
+Sample work in progress DDL statements can be found in Definition.ddl file.
+

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Order_Invoice_FK" directorySegmentName="seg_0" id="C08E16BA-CCAB-0AC4-8AB7-DDF4018B0E9A">
+<createdBy>AlienDev</createdBy>
+<createdTime>2021-04-08 00:28:47 UTC</createdTime>
+<generatorID>F1CF39A2-EF89-6005-0825-6686C5F896AE</generatorID>
+<ownerDesignName>Modeler</ownerDesignName>
+<engineerTo>
+<item key="0D32C268-FEA2-10FE-09EE-15873744C9EE" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<targetTransferable>false</targetTransferable>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>226F49F1-62A1-5444-FD6F-D9B7E21652D7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6F08C8A5-07FA-7402-9A68-031FB96F8975</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

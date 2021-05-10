@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Traveler Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script>
+      function renderStatus(id) {
+        switch(id)
+        {
+          case 1: return "Pending Payment";
+          case 2: return "Recieved";
+          case 3: return "Confirmed";
+          case 4: return "Pending";
+          case 5: return "Cancelled";
+          default: return "Pending";
+        }
+      }
+      var socket = io()
+      socket.on('error', (message) => {
+        var error = document.getElementById("error");
+        error.innerHTML = message
+      })
+
+      socket.on('Retrieved All Data', (data) => {
+        var ordersTable = document.getElementById("ordersTable");
+        var customerTable = document.getElementById("customerTable");
+
+        // Clear DOM Table Elements
+        $("#ordersTable").find("tr:gt(0)").remove();
+        $("#customerTable").find("tr:gt(0)").remove();
+
+        data.orders.forEach(o => {
+          const newRow = ordersTable.insertRow()
+          // order id
+          const orderId = newRow.insertCell();
+          orderId.innerHTML += `<a href=${window.location.href}orders/${o.orderId}>${o.orderId}</a>`
+          // customer id
+          const customerId = newRow.insertCell();
+          customerId.innerHTML = `<a href=${window.location.href}customers/${o.customerId}>${o.customerId}</a>`
+          //invoice
+          const invoice = newRow.insertCell();
+          invoice.innerHTML = o.invoiceId ? true : false
+          //status
+          const status = newRow.insertCell();
+          status.innerHTML = renderStatus(o.statusId)
+        })
+
+        data.customers.forEach(c => {
+          const newRow = customerTable.insertRow()
+          // customer id
+          const customerId = newRow.insertCell();
+          //firstName
+          const firstName = newRow.insertCell();
+          //lastName
+          const lastName = newRow.insertCell();
+
+          //age
+          const age = newRow.insertCell();
+          customerId.innerHTML = `<a href=${window.location.href}customers/${c.customerId}>${c.customerId}</a>`
+          firstName.innerHTML = c.firstName
+          lastName.innerHTML = c.lastName
+          age.innerHTML = c.age
+        })
+      })
+
+      socket.on('Retrieved Monthly Report', (data) => {
+        var ordersTable = document.getElementById("ordersTable");
+        var paid = document.getElementById("paidTotal");
+        var unpaid = document.getElementById("unPaidTotal");
+        var monthRange = document.getElementById("monthRange");
+        paid.innerHTML = ''
+        unpaid.innerHTML = ''
+        monthRange.innerHTML = ''
+        if(data.confirmedTotal) {
+          paid.innerHTML = `Paid/Confirmed: ${+data.confirmedTotal.toFixed(2)}`
+        }
+        if(data.recievedTotal) {
+          unpaid.innerHTML = `Invoiced/Recieved: ${+data.recievedTotal.toFixed(2)}`
+        }
+
+        monthRange.innerHTML += `<strong>Orders between: ${data.firstOfMonth} - ${data.lastOfMonth}</strong>`
+        // Clear DOM Table Elements
+        $("#ordersTable").find("tr:gt(0)").remove();
+
+        data.monthlyOrders.forEach(o => {
+          const newRow = ordersTable.insertRow()
+          // order id
+          const orderId = newRow.insertCell();
+          orderId.innerHTML += `<a href=${window.location.href}orders/${o.orderId}>${o.orderId}</a>`
+          // customer id
+          const customerId = newRow.insertCell();
+          customerId.innerHTML = `<a href=${window.location.href}customers/${o.customerId}>${o.customerId}</a>`
+          //invoice
+          const invoice = newRow.insertCell();
+          invoice.innerHTML = o.invoiceId ? true : false
+          //status
+          const status = newRow.insertCell();
+          status.innerHTML = renderStatus(o.statusId)
+        })
+
+
+      })
+
+      socket.on('Order Placed', (data) => {
+        var ordersTable = document.getElementById("ordersTable");
+        var customerTable = document.getElementById("customerTable");
+
+        const orderRow = ordersTable.insertRow()
+        // order id
+        const orderId = orderRow.insertCell();
+        orderId.innerHTML += `<a href=${window.location.href}orders/${data.order.orderId}>${data.order.orderId}</a>`
+        // customer id
+        const customerId = orderRow.insertCell();
+        customerId.innerHTML =  `<a href=${window.location.href}customers/${data.order.customerId}>${data.order.customerId}</a>`
+        //invoice
+        const invoice = orderRow.insertCell();
+        invoice.innerHTML =  data.order.invoice ? true : false
+        //status
+        const status = orderRow.insertCell();
+        status.innerHTML =  renderStatus(data.order.statusId)
+
+        const customerRow = customerTable.insertRow()
+        // customer id
+        const customerIdCell = customerRow.insertCell();
+        //firstName
+        const firstNameCell = customerRow.insertCell();
+        //lastName
+        const lastNameCell = customerRow.insertCell();
+        //age
+        const ageCell = customerRow.insertCell();
+
+        customerIdCell.innerHTML =  `<a href=${window.location.href}customers/${data.customer.customerId}>${data.customer.customerId}</a>`
+        firstNameCell.innerHTML =  data.customer.firstName
+        lastNameCell.innerHTML =  data.customer.lastName
+        ageCell.innerHTML =  data.customer.age
+
+      })
+
+      
+      function placeOrder()
+      {
+        var error = document.getElementById("error");
+        error.innerHTML = ''
+        socket.emit('Add Order')
+      }
+
+      function getMonthlyReport()
+      {
+        var error = document.getElementById("error");
+        error.innerHTML = ''
+        socket.emit('Get Monthly Report')
+      }
+    </script>
+    <div id="wrapper">
+      <div id="left">
+        <div id="stack">
+          <h4>Place Order</h4>
+          <strong>Generates test data to simulate a new travel order.</strong>
+          <p>- Create new customer if customer does not already exist.</p>
+          <p>- Create locations (U.S Only) if location does not already exist.</p>
+          <p>- Create all bookings related to new order.</p>
+          <p- Create normalized order.</p>
+          <button type="button" class="button" onclick="placeOrder()">Place Order</button>
+        </div>
+        <div id="stack">
+          <h4>Orders By Month</h4>
+          <strong>Retrieves all orders (and customers) by month.</strong>
+          <p>- Selects random month in the year.</p>
+          <p>- Display Total Monthly Paid/CONFIRMED</p>
+          <p>- Display Total Monthly Unpaid/RECIEVED</p>
+          <p id="monthRange"></p>
+          <button type="button" class="button" onclick="getMonthlyReport()">Get Report By Month</button>
+          <p id="paidTotal"></p>
+          <p id="unPaidTotal"></p>
+        </div>
+        <p id="error"></p>
+      </div>
+      <div id="right">
+        <div id="wrapper">
+          <div id="left-table">
+          <h2>Orders</h2>
+            <table id="ordersTable" style="width:100%">
+              <tr>
+                <th>Order #</th>
+                <th>Customer Id</th>
+                <th>Invoiced?</th>
+                <th>Status</th>
+              </tr>
+            </table>
+          </div>
+          <div id="right-table">
+            <h2>Customers</h2>
+            <table id="customerTable" style="width:100%">
+              <tr>
+                <th>Customer Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+              </tr>
+            </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
